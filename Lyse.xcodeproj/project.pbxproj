@@ -12,6 +12,8 @@
 		AFF280BE1CA0159700103965 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF280BC1CA0159700103965 /* MainMenu.xib */; };
 		AFF280C91CA0159700103965 /* LyseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF280C81CA0159700103965 /* LyseTests.swift */; };
 		AFF280D41CA0159700103965 /* LyseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF280D31CA0159700103965 /* LyseUITests.swift */; };
+		F83CBBB21CA0223A007EFE9B /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */; };
+		F83CBBB31CA0223A007EFE9B /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		AFF280CF1CA0159700103965 /* LyseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF280D31CA0159700103965 /* LyseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyseUITests.swift; sourceTree = "<group>"; };
 		AFF280D51CA0159700103965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				AFF280B81CA0159700103965 /* AppDelegate.swift */,
+				F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */,
+				F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */,
 				AFF280BA1CA0159700103965 /* Assets.xcassets */,
 				AFF280BC1CA0159700103965 /* MainMenu.xib */,
 				AFF280BF1CA0159700103965 /* Info.plist */,
@@ -224,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFF280BB1CA0159700103965 /* Assets.xcassets in Resources */,
+				F83CBBB31CA0223A007EFE9B /* MainWindowController.xib in Resources */,
 				AFF280BE1CA0159700103965 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83CBBB21CA0223A007EFE9B /* MainWindowController.swift in Sources */,
 				AFF280B91CA0159700103965 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +479,7 @@
 				AFF280DA1CA0159700103965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFF280DB1CA0159700103965 /* Build configuration list for PBXNativeTarget "LyseTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +488,7 @@
 				AFF280DD1CA0159700103965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFF280DE1CA0159700103965 /* Build configuration list for PBXNativeTarget "LyseUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +497,7 @@
 				AFF280E01CA0159700103965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
