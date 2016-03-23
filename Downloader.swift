@@ -15,7 +15,8 @@ class Downloader{
 	
 	// MARK: - Local Vars
 	
-	var requestUrl: String?
+	var requestUrl: String = testUrl
+	var storage: String? = ""
 	
 	// MARK: - IBOutlets
 	
@@ -23,31 +24,11 @@ class Downloader{
 	
 	// MARK: - Functions
 	
-	init() {
-		requestUrl = testUrl
-	}
-	
-	func download() -> Bool {
-		Alamofire.request(.GET, testUrl).responseJSON {
-			response in
-			print(response.request)
-			print(response.response)
-			//print(response.data)
-			
-			let string = String(data: response.data!, encoding: NSUTF8StringEncoding)
-			
-			print(string)
-			
-			if let JSON = response.result.value {
-				//print("JSON: \(JSON)")
-				
-				let string = String(data: JSON as! NSData, encoding: NSUTF8StringEncoding)
-				
-				print(string)
-				
-			}
+	func downloadHTMLSourceCode() {
+		Alamofire.request(.GET, requestUrl)
+			.responseString(encoding: NSUTF8StringEncoding) { response in
+				self.storage = response.result.value
 		}
-		return true
 	}
 	
 	// MARK: - Delegates
