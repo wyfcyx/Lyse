@@ -53,6 +53,7 @@
 		F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		F8B22F091CA2720800DAB716 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = ../Downloader.swift; sourceTree = "<group>"; };
+		F8B992151CA2D39E00455ED5 /* TEST.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TEST.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 		AFF280B71CA0159700103965 /* Lyse */ = {
 			isa = PBXGroup;
 			children = (
+				F8B992151CA2D39E00455ED5 /* TEST.playground */,
 				AFF280B81CA0159700103965 /* AppDelegate.swift */,
 				F8B22F091CA2720800DAB716 /* Downloader.swift */,
 				F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */,
