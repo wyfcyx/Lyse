@@ -9,15 +9,23 @@
 import Cocoa
 
 class MainWindowController: NSWindowController {
-
+	
+	// MARK: - Local Vars
+	
 	override var windowNibName: String {
 		return "MainWindowController"
 	}
 	
-    override func windowDidLoad() {
+	// MARK: - IBOutlets
+	
+	// MARK: - IBActions
+	
+	// MARK: - Functions
+	
+	override func windowDidLoad() {
         super.windowDidLoad()
-
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
-    
+	// MARK: - Delegates
+
 }

@@ -15,6 +15,7 @@
 		E8F9A9DFCCFC4BDE255AE8B8 /* Pods_Lyse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA8ED1D37483168FC64CE01 /* Pods_Lyse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F83CBBB21CA0223A007EFE9B /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */; };
 		F83CBBB31CA0223A007EFE9B /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */; };
+		F8B22F0A1CA2720800DAB716 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B22F091CA2720800DAB716 /* Downloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AFF280D51CA0159700103965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		F8B22F091CA2720800DAB716 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = ../Downloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				AFF280B81CA0159700103965 /* AppDelegate.swift */,
+				F8B22F091CA2720800DAB716 /* Downloader.swift */,
 				F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */,
 				F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */,
 				AFF280BA1CA0159700103965 /* Assets.xcassets */,
@@ -333,6 +336,7 @@
 			files = (
 				F83CBBB21CA0223A007EFE9B /* MainWindowController.swift in Sources */,
 				AFF280B91CA0159700103965 /* AppDelegate.swift in Sources */,
+				F8B22F0A1CA2720800DAB716 /* Downloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
