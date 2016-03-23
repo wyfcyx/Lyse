@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-var testUrl = "http://utaten.com/lyric/RADIO+FISH/PERFECT+HUMAN/"
+let testUrl = "http://utaten.com/lyric/RADIO+FISH/PERFECT+HUMAN/"
 
 class Downloader{
 	
@@ -28,11 +28,25 @@ class Downloader{
 	}
 	
 	func download() -> Bool {
-		Alamofire.request(.GET, requestUrl!).responseJSON() {
-			(data) in
-			print(data)
+		Alamofire.request(.GET, testUrl).responseJSON {
+			response in
+			print(response.request)
+			print(response.response)
+			//print(response.data)
+			
+			let string = String(data: response.data!, encoding: NSUTF8StringEncoding)
+			
+			print(string)
+			
+			if let JSON = response.result.value {
+				//print("JSON: \(JSON)")
+				
+				let string = String(data: JSON as! NSData, encoding: NSUTF8StringEncoding)
+				
+				print(string)
+				
+			}
 		}
-		
 		return true
 	}
 	
