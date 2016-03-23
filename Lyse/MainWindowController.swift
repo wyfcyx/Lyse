@@ -9,7 +9,7 @@
 import Cocoa
 
 class MainWindowController: NSWindowController {
-	
+	 
 	// MARK: - Local Vars
 	
 	override var windowNibName: String {
