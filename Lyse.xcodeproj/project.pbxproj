@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFEF49801CA2C04300AB42AF /* UtatenFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF497F1CA2C04300AB42AF /* UtatenFetcher.swift */; };
+		AFEF49821CA2C1D200AB42AF /* Lyric.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF49811CA2C1D200AB42AF /* Lyric.swift */; };
 		AFF280B91CA0159700103965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF280B81CA0159700103965 /* AppDelegate.swift */; };
 		AFF280BB1CA0159700103965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF280BA1CA0159700103965 /* Assets.xcassets */; };
 		AFF280BE1CA0159700103965 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF280BC1CA0159700103965 /* MainMenu.xib */; };
@@ -52,6 +54,8 @@
 		021ADB803BFDBFC7DF145B17 /* Pods-Lyse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lyse/Pods-Lyse.debug.xcconfig"; sourceTree = "<group>"; };
 		19500C4FDE16903E8C12788D /* Pods-Lyse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lyse/Pods-Lyse.release.xcconfig"; sourceTree = "<group>"; };
 		4FA8ED1D37483168FC64CE01 /* Pods_Lyse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFEF497F1CA2C04300AB42AF /* UtatenFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtatenFetcher.swift; sourceTree = "<group>"; };
+		AFEF49811CA2C1D200AB42AF /* Lyric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lyric.swift; sourceTree = "<group>"; };
 		AFF280B51CA0159700103965 /* Lyse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF280B81CA0159700103965 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFF280BA1CA0159700103965 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				AFF280BA1CA0159700103965 /* Assets.xcassets */,
 				AFF280BC1CA0159700103965 /* MainMenu.xib */,
 				AFF280BF1CA0159700103965 /* Info.plist */,
+				AFEF497F1CA2C04300AB42AF /* UtatenFetcher.swift */,
+				AFEF49811CA2C1D200AB42AF /* Lyric.swift */,
 			);
 			path = Lyse;
 			sourceTree = "<group>";
@@ -348,6 +354,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFEF49801CA2C04300AB42AF /* UtatenFetcher.swift in Sources */,
+				AFEF49821CA2C1D200AB42AF /* Lyric.swift in Sources */,
 				F83CBBB21CA0223A007EFE9B /* MainWindowController.swift in Sources */,
 				AFF280B91CA0159700103965 /* AppDelegate.swift in Sources */,
 				F898B56C1CA36CE700A1FF0E /* Downloader.swift in Sources */,
