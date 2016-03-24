@@ -118,8 +118,8 @@
 				AFF280C71CA0159700103965 /* LyseTests */,
 				AFF280D21CA0159700103965 /* LyseUITests */,
 				AFF280B61CA0159700103965 /* Products */,
-				44B7E185937EBC0AD62A75FD /* Pods */,
 				318F77F93AFA46EB640C764A /* Frameworks */,
+				44B7E185937EBC0AD62A75FD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};

@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 let testHTMLURL = "http://utaten.com/lyric/NGT48/Maxとき315号/"
-let testJSONURL = "https://httpbin.org/get"
+let testJSONURL = "http://vgmdb.info/search/123?format=json"
 
 class Downloader {
 	
@@ -51,11 +51,19 @@ class HTMLDownloader: Downloader {
 		requestUrl = testHTMLURL
 	}
 	
-	func downloadHTMLSourceCode() {
+	func downloadHTMLSourceCode() -> Bool {
+		var succeed = true
 		Alamofire.request(.GET, requestUrl!)
 			.responseString(encoding: NSUTF8StringEncoding) { response in
-				self.HTMLSourceCodeStorage = response.result.value
+				switch response.result {
+				case .Success(let sourceCode):
+					self.HTMLSourceCodeStorage = sourceCode
+				case .Failure(let error):
+					print(error)
+					succeed = false
+				}
 		}
+		return succeed
 	}
 	
 	// MARK: - Delegates
@@ -78,7 +86,8 @@ class JSONDownloader: Downloader {
 		requestUrl = testJSONURL
 	}
 	
-	func downloadJSONCode() {
+	func downloadJSONCode() -> Bool {
+		var succeed = true
 		Alamofire.request(.GET, requestUrl!)
 			.responseJSON { response in
 				switch response.result {
@@ -86,9 +95,10 @@ class JSONDownloader: Downloader {
 					self.JSONCodeStorage = JSON as? NSDictionary
 				case .Failure(let error):
 					print(error)
+					succeed = false
 				}
-				
 		}
+		return succeed
 	}
 	
 	// MARK: - Delegates
