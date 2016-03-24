@@ -16,6 +16,9 @@ class Downloader {
 	
 	// MARK: - Local Vars
 	
+	var delegate: NetworkDelegate?
+	var storage: AnyObject?
+	
 	var requestUrl: String? {
 		didSet {
 			if let string = requestUrl {
@@ -37,8 +40,6 @@ class Downloader {
 class HTMLDownloader: Downloader {
 	// MARK: - Local Vars
 	
-	var HTMLSourceCodeStorage: String? = ""
-	
 	// MARK: - IBOutlets
 	
 	// MARK: - IBActions
@@ -48,22 +49,24 @@ class HTMLDownloader: Downloader {
 	override init() {
 		super.init()
 		
-		requestUrl = testHTMLURL
+		requestUrl = ""
 	}
 	
-	func downloadHTMLSourceCode() -> Bool {
+	func downloadHTMLSourceCode(sender: JZWindowController) {
 		var succeed = true
+		delegate = sender
+		delegate!.downloadWillStart()
 		Alamofire.request(.GET, requestUrl!)
 			.responseString(encoding: NSUTF8StringEncoding) { response in
 				switch response.result {
 				case .Success(let sourceCode):
-					self.HTMLSourceCodeStorage = sourceCode
+					self.storage = sourceCode
 				case .Failure(let error):
 					print(error)
 					succeed = false
 				}
+				self.delegate!.downloadDidFinish(succeed, downloader: self)
 		}
-		return succeed
 	}
 	
 	// MARK: - Delegates
@@ -71,8 +74,6 @@ class HTMLDownloader: Downloader {
 
 class JSONDownloader: Downloader {
 	// MARK: - Local Vars
-	
-	var JSONCodeStorage: NSDictionary?
 	
 	// MARK: - IBOutlets
 	
@@ -86,19 +87,22 @@ class JSONDownloader: Downloader {
 		requestUrl = testJSONURL
 	}
 	
-	func downloadJSONCode() -> Bool {
+	func downloadJSONCode(sender: JZWindowController) {
 		var succeed = true
+		delegate = sender
+		delegate!.downloadWillStart()
 		Alamofire.request(.GET, requestUrl!)
 			.responseJSON { response in
 				switch response.result {
-				case .Success(let JSON):
-					self.JSONCodeStorage = JSON as? NSDictionary
+				case .Success(_):
+					self.storage = response.result.value
 				case .Failure(let error):
 					print(error)
 					succeed = false
 				}
+				self.delegate?.downloadDidFinish(succeed, downloader: self)
+				
 		}
-		return succeed
 	}
 	
 	// MARK: - Delegates
