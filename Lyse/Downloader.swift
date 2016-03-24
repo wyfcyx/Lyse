@@ -9,11 +9,20 @@
 import Foundation
 import Alamofire
 
+let testHTMLURL = "http://utaten.com/lyric/NGT48/Maxとき315号/"
+let testJSONURL = "https://httpbin.org/get"
+
 class Downloader {
 	
 	// MARK: - Local Vars
 	
-	var requestUrl: String = ""
+	var requestUrl: String? {
+		didSet {
+			if let string = requestUrl {
+				requestUrl = string.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+			}
+		}
+	}
 	
 	// MARK: - IBOutlets
 	
@@ -28,8 +37,6 @@ class Downloader {
 class HTMLDownloader: Downloader {
 	// MARK: - Local Vars
 	
-	let testURL = "http://utaten.com/lyric/RADIO+FISH/PERFECT+HUMAN/"
-	
 	var HTMLSourceCodeStorage: String? = ""
 	
 	// MARK: - IBOutlets
@@ -38,8 +45,14 @@ class HTMLDownloader: Downloader {
 	
 	// MARK: - Functions
 	
+	override init() {
+		super.init()
+		
+		requestUrl = testHTMLURL
+	}
+	
 	func downloadHTMLSourceCode() {
-		Alamofire.request(.GET, testURL)
+		Alamofire.request(.GET, requestUrl!)
 			.responseString(encoding: NSUTF8StringEncoding) { response in
 				self.HTMLSourceCodeStorage = response.result.value
 		}
@@ -51,8 +64,6 @@ class HTMLDownloader: Downloader {
 class JSONDownloader: Downloader {
 	// MARK: - Local Vars
 	
-	let testURL = "http://vgmdb.info/search/123?format=json"
-	
 	var JSONCodeStorage: NSDictionary?
 	
 	// MARK: - IBOutlets
@@ -61,8 +72,14 @@ class JSONDownloader: Downloader {
 	
 	// MARK: - Functions
 	
+	override init() {
+		super.init()
+		
+		requestUrl = testJSONURL
+	}
+	
 	func downloadJSONCode() {
-		Alamofire.request(.GET, testURL)
+		Alamofire.request(.GET, requestUrl!)
 			.responseJSON { response in
 				switch response.result {
 				case .Success(let JSON):

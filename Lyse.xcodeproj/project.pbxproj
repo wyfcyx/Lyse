@@ -15,7 +15,7 @@
 		E8F9A9DFCCFC4BDE255AE8B8 /* Pods_Lyse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA8ED1D37483168FC64CE01 /* Pods_Lyse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F83CBBB21CA0223A007EFE9B /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */; };
 		F83CBBB31CA0223A007EFE9B /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */; };
-		F8B22F0A1CA2720800DAB716 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B22F091CA2720800DAB716 /* Downloader.swift */; };
+		F898B56C1CA36CE700A1FF0E /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F898B56B1CA36CE700A1FF0E /* Downloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F898B57E1CA36E5600A1FF0E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		021ADB803BFDBFC7DF145B17 /* Pods-Lyse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lyse/Pods-Lyse.debug.xcconfig"; sourceTree = "<group>"; };
 		19500C4FDE16903E8C12788D /* Pods-Lyse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lyse/Pods-Lyse.release.xcconfig"; sourceTree = "<group>"; };
@@ -52,8 +65,7 @@
 		AFF280D51CA0159700103965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
-		F8B22F091CA2720800DAB716 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = ../Downloader.swift; sourceTree = "<group>"; };
-		F8B992151CA2D39E00455ED5 /* TEST.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TEST.playground; sourceTree = "<group>"; };
+		F898B56B1CA36CE700A1FF0E /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +136,8 @@
 		AFF280B71CA0159700103965 /* Lyse */ = {
 			isa = PBXGroup;
 			children = (
-				F8B992151CA2D39E00455ED5 /* TEST.playground */,
 				AFF280B81CA0159700103965 /* AppDelegate.swift */,
-				F8B22F091CA2720800DAB716 /* Downloader.swift */,
+				F898B56B1CA36CE700A1FF0E /* Downloader.swift */,
 				F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */,
 				F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */,
 				AFF280BA1CA0159700103965 /* Assets.xcassets */,
@@ -167,6 +178,7 @@
 				AFF280B31CA0159700103965 /* Resources */,
 				CFFA5C9ECFA439808080F914 /* Embed Pods Frameworks */,
 				DC0EEB5D8C47C54958AA5B30 /* Copy Pods Resources */,
+				F898B57E1CA36E5600A1FF0E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -338,7 +350,7 @@
 			files = (
 				F83CBBB21CA0223A007EFE9B /* MainWindowController.swift in Sources */,
 				AFF280B91CA0159700103965 /* AppDelegate.swift in Sources */,
-				F8B22F0A1CA2720800DAB716 /* Downloader.swift in Sources */,
+				F898B56C1CA36CE700A1FF0E /* Downloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

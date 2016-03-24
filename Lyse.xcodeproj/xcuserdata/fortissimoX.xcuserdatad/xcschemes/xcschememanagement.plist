@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Lyse-TEST.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Lyse.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>AFF280CE1CA0159700103965</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F898B5711CA36E5600A1FF0E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
