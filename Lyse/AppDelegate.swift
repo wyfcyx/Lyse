@@ -13,7 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	// MARK: - Local Vars
 	
-	var mainWindowController: VGMdbViewController?
+	var VGMdbWindowController: VGMdbViewController?
+	var testWindowController: TestWindowController?
 	
 	// MARK: - IBOutlets
 	
@@ -26,11 +27,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	// MARK: - > NSApplicationDelegate
 	
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
-		let mainWindowController = VGMdbViewController()
+		let mainWindowController = TestWindowController()
 		
 		mainWindowController.showWindow(self)
 		
-		self.mainWindowController = mainWindowController
+		self.testWindowController = mainWindowController		
 	}
 	
     func applicationWillTerminate(aNotification: NSNotification) {

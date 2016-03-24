@@ -15,12 +15,12 @@
 		AFF280C91CA0159700103965 /* LyseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF280C81CA0159700103965 /* LyseTests.swift */; };
 		AFF280D41CA0159700103965 /* LyseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF280D31CA0159700103965 /* LyseUITests.swift */; };
 		E8F9A9DFCCFC4BDE255AE8B8 /* Pods_Lyse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA8ED1D37483168FC64CE01 /* Pods_Lyse.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		F83CBBB21CA0223A007EFE9B /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */; };
-		F83CBBB31CA0223A007EFE9B /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */; };
 		F854B5221CA37910003883FE /* VGMdbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F854B5201CA37910003883FE /* VGMdbViewController.swift */; };
 		F854B5231CA37910003883FE /* VGMdbViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F854B5211CA37910003883FE /* VGMdbViewController.xib */; };
 		F856B9B51CA3ADBA008DBF3B /* JZWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F856B9B41CA3ADBA008DBF3B /* JZWindowController.swift */; };
 		F876FF8A1CA387670023D429 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F876FF891CA387670023D429 /* Delegates.swift */; };
+		F8797DC31CA3E51B001B1781 /* TestWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8797DC11CA3E51B001B1781 /* TestWindowController.swift */; };
+		F8797DC41CA3E51B001B1781 /* TestWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8797DC21CA3E51B001B1781 /* TestWindowController.xib */; };
 		F898B56C1CA36CE700A1FF0E /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F898B56B1CA36CE700A1FF0E /* Downloader.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,12 +71,12 @@
 		AFF280CF1CA0159700103965 /* LyseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF280D31CA0159700103965 /* LyseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyseUITests.swift; sourceTree = "<group>"; };
 		AFF280D51CA0159700103965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
-		F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		F854B5201CA37910003883FE /* VGMdbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGMdbViewController.swift; sourceTree = "<group>"; };
 		F854B5211CA37910003883FE /* VGMdbViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VGMdbViewController.xib; sourceTree = "<group>"; };
 		F856B9B41CA3ADBA008DBF3B /* JZWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JZWindowController.swift; sourceTree = "<group>"; };
 		F876FF891CA387670023D429 /* Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
+		F8797DC11CA3E51B001B1781 /* TestWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWindowController.swift; sourceTree = "<group>"; };
+		F8797DC21CA3E51B001B1781 /* TestWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestWindowController.xib; sourceTree = "<group>"; };
 		F898B56B1CA36CE700A1FF0E /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,19 +148,19 @@
 		AFF280B71CA0159700103965 /* Lyse */ = {
 			isa = PBXGroup;
 			children = (
-				F876FF891CA387670023D429 /* Delegates.swift */,
 				AFF280B81CA0159700103965 /* AppDelegate.swift */,
+				F876FF891CA387670023D429 /* Delegates.swift */,
 				F898B56B1CA36CE700A1FF0E /* Downloader.swift */,
 				F856B9B41CA3ADBA008DBF3B /* JZWindowController.swift */,
 				F854B5201CA37910003883FE /* VGMdbViewController.swift */,
 				F854B5211CA37910003883FE /* VGMdbViewController.xib */,
-				F83CBBB01CA0223A007EFE9B /* MainWindowController.swift */,
-				F83CBBB11CA0223A007EFE9B /* MainWindowController.xib */,
+				F8797DC11CA3E51B001B1781 /* TestWindowController.swift */,
+				F8797DC21CA3E51B001B1781 /* TestWindowController.xib */,
+				AFEF49811CA2C1D200AB42AF /* Lyric.swift */,
+				AFEF497F1CA2C04300AB42AF /* UtatenFetcher.swift */,
 				AFF280BA1CA0159700103965 /* Assets.xcassets */,
 				AFF280BC1CA0159700103965 /* MainMenu.xib */,
 				AFF280BF1CA0159700103965 /* Info.plist */,
-				AFEF497F1CA2C04300AB42AF /* UtatenFetcher.swift */,
-				AFEF49811CA2C1D200AB42AF /* Lyric.swift */,
 			);
 			path = Lyse;
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFF280BB1CA0159700103965 /* Assets.xcassets in Resources */,
-				F83CBBB31CA0223A007EFE9B /* MainWindowController.xib in Resources */,
+				F8797DC41CA3E51B001B1781 /* TestWindowController.xib in Resources */,
 				AFF280BE1CA0159700103965 /* MainMenu.xib in Resources */,
 				F854B5231CA37910003883FE /* VGMdbViewController.xib in Resources */,
 			);
@@ -368,8 +368,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFEF49801CA2C04300AB42AF /* UtatenFetcher.swift in Sources */,
+				F8797DC31CA3E51B001B1781 /* TestWindowController.swift in Sources */,
 				AFEF49821CA2C1D200AB42AF /* Lyric.swift in Sources */,
-				F83CBBB21CA0223A007EFE9B /* MainWindowController.swift in Sources */,
 				AFF280B91CA0159700103965 /* AppDelegate.swift in Sources */,
 				F854B5221CA37910003883FE /* VGMdbViewController.swift in Sources */,
 				F876FF8A1CA387670023D429 /* Delegates.swift in Sources */,

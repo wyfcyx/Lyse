@@ -73,6 +73,7 @@ class UtatenFetcher {
         var lastWord: String!//存放最后一次得到的Word
         var lastPart: Part = Part(sinogram: "", hiragana: "")//存放最后一次得到的Part
         var bracketString: String
+		
         while true {
             //得到一个新的行
             (endIndex, nextIndex) = getLineOfHtmlSourceCode(htmlSourceCode, leftIndex: beginIndex!)
@@ -84,25 +85,32 @@ class UtatenFetcher {
                     nowIndex = tempIndex
                     if bracketString.rangeOfString("<br />") != nil {
                         ansLyric.insertPart(Part(sinogram: "\n", hiragana: ""))
-                    } else if bracketString.rangeOfString("</") != nil {
+                    }
+					else if bracketString.rangeOfString("</") != nil {
                         if stack[stack.count - 1] == "rb" {
                             lastPart.sinogram = lastWord
-                        } else if stack[stack.count - 1] == "rt" {
+                        }
+						else if stack[stack.count - 1] == "rt" {
                             lastPart.hiragana = lastWord
-                        } else if stack[stack.count - 1] == "ruby" {
+                        }
+						else if stack[stack.count - 1] == "ruby" {
                             ansLyric.insertPart(lastPart)
                             //ansLyric.output()
                             lastPart = Part(sinogram: "", hiragana: "")
                         }
                         stack.popLast()
-                    } else {
+                    }
+					else {
                         let className = getBracketClass(bracketString)
-                        if (className != "ruby" && className != "rb" && className != "rt") {
+						
+						/*if (className != "ruby" && className != "rb" && className != "rt") {
                             print("New type occured!")
                         }
+						*/
                         stack.append(className)
                     }
-                } else {
+                }
+				else {
                     (tempIndex, lastWord) = getAWord(htmlSourceCode, leftIndex: nowIndex)
                     nowIndex = tempIndex
                     if stack[stack.count - 1] == "medium" {

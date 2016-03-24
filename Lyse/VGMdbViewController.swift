@@ -68,7 +68,6 @@ class VGMdbViewController: JZWindowController, NSTableViewDataSource, NSTableVie
 		progressIndicator.startAnimation(nil)
 		searchButton.enabled = false
 		languageSelector.enabled = false
-		
 	}
 	
 	override func downloadDidFinish(isSucceeded: Bool, downloader: Downloader) {

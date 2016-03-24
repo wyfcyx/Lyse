@@ -52,10 +52,14 @@ class HTMLDownloader: Downloader {
 		requestUrl = ""
 	}
 	
-	func downloadHTMLSourceCode(sender: JZWindowController) {
+	func downloadHTMLSourceCode(sender: JZWindowController?) {
 		var succeed = true
-		delegate = sender
-		delegate!.downloadWillStart()
+		var willDelegate = false
+		if let original = sender {
+			delegate = original
+			delegate!.downloadWillStart()
+			willDelegate = true
+		}
 		Alamofire.request(.GET, requestUrl!)
 			.responseString(encoding: NSUTF8StringEncoding) { response in
 				switch response.result {
@@ -65,7 +69,9 @@ class HTMLDownloader: Downloader {
 					print(error)
 					succeed = false
 				}
-				self.delegate!.downloadDidFinish(succeed, downloader: self)
+				if willDelegate {
+					self.delegate!.downloadDidFinish(succeed, downloader: self)
+				}
 		}
 	}
 	
@@ -87,10 +93,14 @@ class JSONDownloader: Downloader {
 		requestUrl = testJSONURL
 	}
 	
-	func downloadJSONCode(sender: JZWindowController) {
+	func downloadJSONCode(sender: JZWindowController?) {
 		var succeed = true
-		delegate = sender
-		delegate!.downloadWillStart()
+		var willDelegate = false
+		if let original = sender {
+			delegate = original
+			delegate!.downloadWillStart()
+			willDelegate = true
+		}
 		Alamofire.request(.GET, requestUrl!)
 			.responseJSON { response in
 				switch response.result {
@@ -100,8 +110,9 @@ class JSONDownloader: Downloader {
 					print(error)
 					succeed = false
 				}
-				self.delegate?.downloadDidFinish(succeed, downloader: self)
-				
+				if willDelegate {
+					self.delegate?.downloadDidFinish(succeed, downloader: self)
+				}
 		}
 	}
 	
