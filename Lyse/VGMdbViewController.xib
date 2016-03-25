@@ -120,7 +120,7 @@
                                                 </tableCellView>
                                             </prototypeCellViews>
                                         </tableColumn>
-                                        <tableColumn identifier="releasedate" width="112.73046875" minWidth="10" maxWidth="3.4028234663852886e+38" id="WGA-Rg-dwQ">
+                                        <tableColumn identifier="releasedate" width="113.33984375" minWidth="10" maxWidth="3.4028234663852886e+38" id="WGA-Rg-dwQ">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Release Date">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -164,7 +164,7 @@
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="JG4-Fq-jDX">
-                            <rect key="frame" x="1" y="255" width="528" height="15"/>
+                            <rect key="frame" x="1" y="8" width="0.0" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="A8b-dV-rKu">
@@ -219,7 +219,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="330" y="348"/>
+            <point key="canvasLocation" x="331" y="387"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="2qg-PA-Zv8"/>
     </objects>

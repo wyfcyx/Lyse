@@ -78,7 +78,7 @@ class VGMdbViewController: JZWindowController, NSTableViewDataSource, NSTableVie
 		languageSelector.enabled = true
 		
 		if isSucceeded {
-			let alert = NSAlert()
+			/*let alert = NSAlert()
 			alert.addButtonWithTitle("OK")
 			alert.messageText = "Succeeded"
 			alert.informativeText = "We have fetched the data."
@@ -88,7 +88,7 @@ class VGMdbViewController: JZWindowController, NSTableViewDataSource, NSTableVie
 				default:
 					return
 				}
-			})
+			})*/
 			
 			//JSONData
 			
